@@ -2,7 +2,7 @@ const express = require('express')
 const logger = require('morgan')
 const cors = require('cors')
 const app = express()
-const controller = require('./controllers/resources.controller')
+const controller = require('./controllers/transactions.controller')
 
 app.use(logger('dev'))
 app.use(express.json())
