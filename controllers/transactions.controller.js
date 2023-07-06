@@ -25,7 +25,7 @@ router.post('/', (req,res) => {
     res.send(transactions)
 })
 
-// TODO: Delete a transaction
+
 router.delete('/:id', (req,res) => {
     const transactionId = req.params.id
     const foundTransaction = transactions.findIndex(x => x.id === Number(transactionId))
@@ -37,9 +37,17 @@ router.delete('/:id', (req,res) => {
     }
 })
 
-// TODO: Update a transaction
+
 router.put('/:id', (req,res) => {
-    res.send('')
+    const transactionId = req.params.id
+    const foundTransaction = transactions.findIndex(x => x.id === Number(transactionId))
+    if(foundTransaction > -1){
+        const newTransaction = req.body
+        transactions.splice(foundTransaction, 1, newTransaction)
+        res.send(transactions)
+    }else{
+        res.status(404).send('Transaction not found.')
+    }
 })
 
 
