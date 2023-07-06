@@ -7,6 +7,8 @@ const controller = require('./controllers/resources.controller')
 app.use(logger('dev'))
 app.use(express.json())
 app.use(cors())
+app.use('/transactions', controller)
+
 
 app.get('/', (req,res) => {
     res.send('Hello')
