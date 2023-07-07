@@ -4,16 +4,16 @@ module.exports = [
     {
         id: uuidV4(),
         item: "income",
-        amount: 3500,
-        date: '07/06/2023',
+        amount: "3500",
+        date: "July 6",
         from: 'Yanako Lajara',
         category: 'income',
     },
     {
-        id: 123,
+        id: "123",
         item: "test",
-        amount: 1500,
-        date: '07/06/2023',
+        amount: "1500",
+        date: "July 12",
         from: 'YNK TESTER',
         category: 'TEST',
     }
